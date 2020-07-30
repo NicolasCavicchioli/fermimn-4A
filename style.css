@@ -26,5 +26,20 @@ body{
 /* ~-----------------------------------------------~ */
 
 #footer{
+	background-color:  #878787;
+	height: 250px;
+	margin: 20px;
+}
+
+#foot_text{
+	color: aliceblue;
+	font-family: 'Lucida Sans';
+	line-height: 37px;
+	size: 20px;
+
+	text-align: center;
+	padding: 25px;
+	
+	
 	
 }
