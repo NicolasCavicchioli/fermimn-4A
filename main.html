@@ -5,27 +5,108 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Fermimn</title>
 	
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css"/>
+	
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script src="functions.js"></script>
 	
 </head>
 <body>
 	
-	<div id="header">
+	<header>
+		<img class="img1" src="logo fermi.jpg">
+		<img class="img2" src="Scritta Fermi.png">
+		<br>
 		
-	</div>
+		<ul class="dropdowns">
+			<li class="dropdown">
+				<button class="dropbtn">ISTITUTO</button>
+				<div class="dropdown-content">
+					<a href="http://fermimn.edu.it/dove_siamo/index.php">Chi siamo</a>
+					<a href="http://fermimn.edu.it/persone/index.php">Le persone</a>
+					<a href="http://fermimn.edu.it/struttura/index.php">I nostri corsi</a>
+					<a href="http://fermimn.edu.it/servizi/index.php">Strutture e servizi</a>
+					<a href="http://fermimn.edu.it/documenti/index.php">Documenti</a>
+					<a href="http://fermimn.edu.it/parlanodinoi/index.php">Parlano di noi</a>
+					<a href="http://fermimn.edu.it/bandi/">Bandi e gare</a>
+					<a href="http://www.istitutocomprensivoasola.gov.it/rete-di-ambito-19-mantova">Reti di ambito 2019</a>
+				</div>
+			</li>
+			<li class="dropdown">
+				<button class="dropbtn"><span class="hideWhenSmall">A.S. </span>2019/2020</button>
+				<div class="dropdown-content">
+					<a href="http://fermimn.edu.it/orari/index.php">Calendario-Orari</a>
+					<a href="http://fermimn.edu.it/progetti/index.php">Progetti</a>
+					<a href="http://fermimn.edu.it/cittadinanza/index.php">Cittadinanza e Costituzione</a>
+					<a href="http://fermimn.edu.it/formazione/index.php">Formazione</a>
+					<a href="https://www.fermi.mn.it/programmazione-comune/">Programmazione comune</a>
+					<a href="http://fermimn.edu.it/alternanza/">PTCO</a>
+					<a href="http://fermimn.edu.it/invalsi/index.php">Materiali invalsi</a>
+					<a href="http://fermimn.edu.it/studenti/viaggi.php">Viaggi ed uscite didattiche</a>
+					<a href="http://fermimn.edu.it/fabacademy/index.php">FabAcademy</a>
+					<a href="http://fermimn.edu.it/green/">Innovazioni Green</a>
+					<a href="http://fermimn.edu.it/privacy/index.php">Privacy GDPR 679/16</a>
+				</div>
+			</li>
+			<li class="dropdown">
+				<button class="dropbtn">NEWS</button>
+				<div class="dropdown-content">
+					<a href="http://fermimn.edu.it/index.php">Notizie generali</a>
+					<a href="http://fermimn.edu.it/studenti/index.php">Notizie per studenti</a>
+					<a href="http://fermimn.edu.it/genitori/index.php">Notizie per genitori</a>
+					<a href="http://fermimn.edu.it/docenti/index.php">Notizie per docenti</a>
+					<a href="http://fermimn.edu.it/ATA/index.php">Notizie per personale ATA</a>
+					<a href="http://fermimn.edu.it/informazioni/index.php">Notizie per III medie</a>
+					<a href="http://fermimn.edu.it/orientamento_uni/index.php">Notizie per orientamento in uscita</a>
+				</div>
+			</li>
+			<li class="dropdown">
+				<button class="dropbtn"><span class="hideWhenSmall">I NOSTRI </span>SITI</button>
+				<div class="dropdown-content">
+					<a href="http://fermimn.edu.it/storia/index.php">I siti del Fermi</a>
+					<a href="http://fermimn.edu.it/opensource/index.php">Open Source e Freeware</a>
+					<a href="http://servizi.fermi.mn.it/fotovoltaico/">Fotovoltaico</a>
+					<a href="http://servizi.fermi.mn.it/fotovoltaico/provincia.php">Dati energetici</a>
+					<a href="http://fermimn.edu.it/archiviodistato/index.php">Archivio di Stato</a>
+					<a href="http://scuola21.fermi.mn.it/">Scuola21</a>
+					<a href="http://ler.fermimn.edu.it/index.php">Progetto LER</a>
+				</div>
+			</li>
+			<li class="dropdown">
+				<button class="dropbtn">LINGUA</button>
+			</li>
+		</ul>
+		
+	</header>
 	
 	
 	<div id="menu-popup" class="openMenu">
 	</div>
 	
 	
-	<div id="main">
+	<main>
 		
-	</div>
+		<!-- Swiper -->
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">Slide 1</div>
+				<div class="swiper-slide"><img src="accesa.gif" alt=""></div>
+				<div class="swiper-slide">Slide 3</div>
+			</div>
+			
+			<!-- Add Arrows -->
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+			
+			<!-- Add Pagination -->
+			<div class="swiper-pagination"></div>
+		</div>
+		
+	</main>
 	
 	
-	<div id="footer">
+	<footer>
 		
 		<p id="foot_text">
 			
@@ -39,7 +120,26 @@
 			
 			<b>CCP:</b>12443461    <b>CTU:</b>0313440    <b>COD.UNIVOCO.UFFICIO:</b>UF6LSZ
 		</p>
-	</div>
+		
+	</footer>
+	
+	<script>
+		var swiper = new Swiper('.swiper-container', {
+			pagination: {
+				el: '.swiper-pagination',
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			autoplay: {
+				delay: 5000,
+			},
+			simulateTouch: window.outerWidth <= 768,
+			speed: 750,
+			
+		});
+	</script>
 	
 </body>
 </html>
