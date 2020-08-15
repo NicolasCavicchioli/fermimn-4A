@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" data-theme="light">
 <head>
+	<title>Fermimn</title>
+	
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Fermimn</title>
+	<meta name="Description" content="Istituto E.Fermi; nuovo sito ad elevata accessibilità liceo tecnico industriale liceo tecnologico">
+	<meta name="Keywords" content="accessibilità , informatica, elettronica, meccanica, chimica, elettrotecnica, liceo tecnologico; sito accessibile,  mantova , ECDL test center">
 	
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css"/>
 	
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script src="functions.js"></script>
 	
@@ -15,84 +19,91 @@
 <body>
 	
 	<header>
-		<img class="img1" src="logo fermi.jpg">
-		<img class="img2" src="Scritta Fermi.png">
+		<img class="img1" src="data/logo fermi.jpg">
+		<img class="img2" src="data/Scritta Fermi.png">
+		<input type="checkbox" name="theme" style="width:50px;height:50px">
 		<br>
 		
-		<ul class="dropdowns">
-			<li class="dropdown">
-				<button class="dropbtn">ISTITUTO</button>
-				<div class="dropdown-content">
-					<a href="http://fermimn.edu.it/dove_siamo/index.php">Chi siamo</a>
-					<a href="http://fermimn.edu.it/persone/index.php">Le persone</a>
-					<a href="http://fermimn.edu.it/struttura/index.php">I nostri corsi</a>
-					<a href="http://fermimn.edu.it/servizi/index.php">Strutture e servizi</a>
-					<a href="http://fermimn.edu.it/documenti/index.php">Documenti</a>
-					<a href="http://fermimn.edu.it/parlanodinoi/index.php">Parlano di noi</a>
-					<a href="http://fermimn.edu.it/bandi/">Bandi e gare</a>
-					<a href="http://www.istitutocomprensivoasola.gov.it/rete-di-ambito-19-mantova">Reti di ambito 2019</a>
-				</div>
-			</li>
-			<li class="dropdown">
-				<button class="dropbtn"><span class="hideWhenSmall">A.S. </span>2019/2020</button>
-				<div class="dropdown-content">
-					<a href="http://fermimn.edu.it/orari/index.php">Calendario-Orari</a>
-					<a href="http://fermimn.edu.it/progetti/index.php">Progetti</a>
-					<a href="http://fermimn.edu.it/cittadinanza/index.php">Cittadinanza e Costituzione</a>
-					<a href="http://fermimn.edu.it/formazione/index.php">Formazione</a>
-					<a href="https://www.fermi.mn.it/programmazione-comune/">Programmazione comune</a>
-					<a href="http://fermimn.edu.it/alternanza/">PTCO</a>
-					<a href="http://fermimn.edu.it/invalsi/index.php">Materiali invalsi</a>
-					<a href="http://fermimn.edu.it/studenti/viaggi.php">Viaggi ed uscite didattiche</a>
-					<a href="http://fermimn.edu.it/fabacademy/index.php">FabAcademy</a>
-					<a href="http://fermimn.edu.it/green/">Innovazioni Green</a>
-					<a href="http://fermimn.edu.it/privacy/index.php">Privacy GDPR 679/16</a>
-				</div>
-			</li>
-			<li class="dropdown">
-				<button class="dropbtn">NEWS</button>
-				<div class="dropdown-content">
-					<a href="http://fermimn.edu.it/index.php">Notizie generali</a>
-					<a href="http://fermimn.edu.it/studenti/index.php">Notizie per studenti</a>
-					<a href="http://fermimn.edu.it/genitori/index.php">Notizie per genitori</a>
-					<a href="http://fermimn.edu.it/docenti/index.php">Notizie per docenti</a>
-					<a href="http://fermimn.edu.it/ATA/index.php">Notizie per personale ATA</a>
-					<a href="http://fermimn.edu.it/informazioni/index.php">Notizie per III medie</a>
-					<a href="http://fermimn.edu.it/orientamento_uni/index.php">Notizie per orientamento in uscita</a>
-				</div>
-			</li>
-			<li class="dropdown">
-				<button class="dropbtn"><span class="hideWhenSmall">I NOSTRI </span>SITI</button>
-				<div class="dropdown-content">
-					<a href="http://fermimn.edu.it/storia/index.php">I siti del Fermi</a>
-					<a href="http://fermimn.edu.it/opensource/index.php">Open Source e Freeware</a>
-					<a href="http://servizi.fermi.mn.it/fotovoltaico/">Fotovoltaico</a>
-					<a href="http://servizi.fermi.mn.it/fotovoltaico/provincia.php">Dati energetici</a>
-					<a href="http://fermimn.edu.it/archiviodistato/index.php">Archivio di Stato</a>
-					<a href="http://scuola21.fermi.mn.it/">Scuola21</a>
-					<a href="http://ler.fermimn.edu.it/index.php">Progetto LER</a>
-				</div>
-			</li>
-			<li class="dropdown">
-				<button class="dropbtn">LINGUA</button>
-			</li>
-		</ul>
+		<div class="search-box">
+			<input class="search-txt" type="text" name="" placeholder="Type to search"></input>
+			<a href="#" class="search-btn">
+				<i class="fas fa-search"></i>
+			</a>
+		</div>
+		<br>
+		
+		<nav>
+			<ul class="dropdowns">
+				<li class="dropdown">
+					<button class="dropbtn">ISTITUTO</button>
+					<div class="dropdown-content">
+						<a href="http://fermimn.edu.it/dove_siamo/index.php">Chi siamo</a>
+						<a href="http://fermimn.edu.it/persone/index.php">Le persone</a>
+						<a href="http://fermimn.edu.it/struttura/index.php">I nostri corsi</a>
+						<a href="http://fermimn.edu.it/servizi/index.php">Strutture e servizi</a>
+						<a href="http://fermimn.edu.it/documenti/index.php">Documenti</a>
+						<a href="http://fermimn.edu.it/parlanodinoi/index.php">Parlano di noi</a>
+						<a href="http://fermimn.edu.it/bandi/">Bandi e gare</a>
+						<a href="http://www.istitutocomprensivoasola.gov.it/rete-di-ambito-19-mantova">Reti di ambito 2019</a>
+					</div>
+				</li>
+				<li class="dropdown">
+					<button class="dropbtn"><span class="hideWhenSmall">A.S. </span>2019/2020</button>
+					<div class="dropdown-content">
+						<a href="http://fermimn.edu.it/orari/index.php">Calendario-Orari</a>
+						<a href="http://fermimn.edu.it/progetti/index.php">Progetti</a>
+						<a href="http://fermimn.edu.it/cittadinanza/index.php">Cittadinanza e Costituzione</a>
+						<a href="http://fermimn.edu.it/formazione/index.php">Formazione</a>
+						<a href="https://www.fermi.mn.it/programmazione-comune/">Programmazione comune</a>
+						<a href="http://fermimn.edu.it/alternanza/">PTCO</a>
+						<a href="http://fermimn.edu.it/invalsi/index.php">Materiali invalsi</a>
+						<a href="http://fermimn.edu.it/studenti/viaggi.php">Viaggi ed uscite didattiche</a>
+						<a href="http://fermimn.edu.it/fabacademy/index.php">FabAcademy</a>
+						<a href="http://fermimn.edu.it/green/">Innovazioni Green</a>
+						<a href="http://fermimn.edu.it/privacy/index.php">Privacy GDPR 679/16</a>
+					</div>
+				</li>
+				<li class="dropdown">
+					<button class="dropbtn">NEWS</button>
+					<div class="dropdown-content">
+						<a href="http://fermimn.edu.it/index.php">Generali</a>
+						<a href="http://fermimn.edu.it/studenti/index.php">Studenti</a>
+						<a href="http://fermimn.edu.it/genitori/index.php">Genitori</a>
+						<a href="http://fermimn.edu.it/docenti/index.php">Docenti</a>
+						<a href="http://fermimn.edu.it/ATA/index.php">Personale ATA</a>
+						<a href="http://fermimn.edu.it/informazioni/index.php">III medie</a>
+						<a href="http://fermimn.edu.it/orientamento_uni/index.php">Orientamento in uscita</a>
+					</div>
+				</li>
+				<li class="dropdown">
+					<button class="dropbtn"><span class="hideWhenSmall">I NOSTRI </span>SITI</button>
+					<div class="dropdown-content">
+						<a href="http://fermimn.edu.it/storia/index.php">I siti del Fermi</a>
+						<a href="http://fermimn.edu.it/opensource/index.php">Open Source e Freeware</a>
+						<a href="http://servizi.fermi.mn.it/fotovoltaico/">Fotovoltaico</a>
+						<a href="http://servizi.fermi.mn.it/fotovoltaico/provincia.php">Dati energetici</a>
+						<a href="http://fermimn.edu.it/archiviodistato/index.php">Archivio di Stato</a>
+						<a href="http://scuola21.fermi.mn.it/">Scuola21</a>
+						<a href="http://ler.fermimn.edu.it/index.php">Progetto LER</a>
+					</div>
+				</li>
+				<li class="dropdown">
+					<button class="dropbtn">LINGUA</button>
+				</li>
+			</ul>
+		</nav>
 		
 	</header>
-	
-	
-	<div id="menu-popup" class="openMenu">
-	</div>
 	
 	
 	<main>
 		
 		<!-- Swiper -->
-		<div class="swiper-container">
+		<section class="swiper-container">
 			<div class="swiper-wrapper">
-				<div class="swiper-slide">Slide 1</div>
-				<div class="swiper-slide"><img src="accesa.gif" alt=""></div>
-				<div class="swiper-slide">Slide 3</div>
+				<a class="swiper-slide">Notizia 1, con immgine, piccolo testo e link alla notizia intera </a>
+				<a class="swiper-slide"><img class="img3" src="data/Immagine%20Slider.JPG"></a>
+				<a class="swiper-slide">Slide 3</a>
 			</div>
 			
 			<!-- Add Arrows -->
@@ -101,24 +112,46 @@
 			
 			<!-- Add Pagination -->
 			<div class="swiper-pagination"></div>
+		</section>
+		
+		<nav class="nav2">
+			<ul>
+				<li><a href=""><img src="data/logo%20Zimbra.PNG" 		><br><span>ZIMBRA</span></a></li>
+				<li><a href="http://fermi-mn-sito.registroelettronico.com/"><img src="data/logo%20Mastercom.PNG" 	><br><span>REGISTRO ELETTRONICO	</span></a></li>
+				<li><a href="https://www.fermimn.edu.it/pagoinrete/">				<img src="data/logo%20Pagoinrete.PNG"	><br><span>PAGO IN RETE					</span></a></li>
+				<li><a href="https://moodle.fermi.mn.it/login/index.php">		<img src="data/logo%20Moodle.png" 		><br><span>MOODLE								</span></a></li>
+				<li><a href="https://www.fermimn.edu.it/orari/calendar.php"><img src="data/logo%20Fermi.jpg" 			><br><span>CALENDARIO-ORARI			</span></a></li>
+			</ul>
+		</nav>
+		
+		<div class="div">
+			CALENDARIO
+		</div>
+		
+		<div class="div">
+			NOTIZIE CHE SCORRONO
 		</div>
 		
 	</main>
 	
 	
+	<div id="menu-popup">
+		<aside></aside>
+	</div>
+	
+	
 	<footer>
 		
 		<p id="foot_text">
-			
-			<b> Strada Spolverina, 5 Mantova</b> <br> 
-			
-			<b>Tel:</b>0376 262675 	 <b>C.M.:</b>MNIS01100E    <b>Codice Fiscale:</b>80016570204 <br>
-
-			<b>IBAN banca :</b>IT 62 S 05696 11500 000013000X51<br> 
-
-			<b>IBAN posta:</b>IT 22 W 07601 11500 000012443461 <br>
-			
-			<b>CCP:</b>12443461    <b>CTU:</b>0313440    <b>COD.UNIVOCO.UFFICIO:</b>UF6LSZ
+			Strada Spolverina 5 - Mantova 46100
+			<br>
+			Tel: 0376-262675 <span class="footertext"> | </span> C.M.: MNIS01100E <span class="footertext"> | </span> Codice Fiscale: 80016570204
+			<br>
+			IBAN banca: IT 62 S 05696 11500 000013000X51
+			<br>
+			IBAN posta: IT 22 W 07601 11500 000012443461
+			<br>
+			CCP: 12443461 <span class="footertext"> | </span> CTU: 0313440 <span class="footertext"> | </span> COD.UNIVOCO UFFICIO: UF6LSZ
 		</p>
 		
 	</footer>
@@ -139,6 +172,13 @@
 			speed: 750,
 			
 		});
+		
+		document.querySelector('input[name=theme]')
+		.addEventListener('change', function(){
+			if (this.checked) document.firstElementChild.setAttribute('data-theme', 'dark');
+			else 							document.firstElementChild.setAttribute('data-theme', 'light');
+		});
+		
 	</script>
 	
 </body>
