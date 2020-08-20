@@ -10,11 +10,12 @@
 html{
 	--bg: white;
 	--color-text: black;
-
+	--msg-color: lightgray;
 }
 html[data-theme='dark']{
 	--bg:#131419;
 	--color-text: #fff;
+	--msg-color: darkblue;
 }
 
 body{
@@ -31,9 +32,12 @@ header{
 
 }
 
+header>a {
+	display: contents;
+}
+
 .img1 {
-	padding: 20px;
-	padding-right: 0px;
+	margin: 10px 0 10px 10px;
 	width: 150px;
 	height: 150px;
 }
@@ -49,7 +53,7 @@ header{
 .search-box {
 	position: absolute;
 	right: 0;
-	transform: translate(0, -73%);
+	transform: translateY(-100%);
 	border-radius: 20px 20px 0 0;
 	padding: 10px;
 	height: 40px;
@@ -61,7 +65,7 @@ header{
 	content:"";
 	position: absolute;
 	left: -20px;
-	bottom: 0px;
+	bottom: 0;
 	border: 0 solid #2f3640;
 	border-width: 0 20px 20px 0;
 }
@@ -103,20 +107,15 @@ header{
 	width: 240px;
 }
 
-
-
 .dropdowns {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
 	justify-content: space-evenly;
-	position: sticky;
-	top: 0;
-	margin-bottom: 0;
+	margin: 0;
 	border-radius: var(--button-border-radius);
 	border-top-right-radius: 0;
 	background: mediumblue;
-	z-index: 2;
 }
 
 .dropdown{
@@ -158,7 +157,9 @@ header{
 	min-width: 100%;
 	max-height: 0;
 	background-color: lightgray;
+	box-shadow: 0 0 10px gray;
 	transition-duration: .3s;
+	z-index: 2;
 }
 .dropdowns .dropdown:first-child .dropdown-content{
 	border-top-left-radius: var(--button-border-radius);
@@ -167,7 +168,7 @@ header{
 	border-top-right-radius: var(--button-border-radius);
 }
 .dropdown:hover .dropdown-content{
-	max-height:600px;
+	max-height: 600px;
 }
 
 .dropdown-content a{
@@ -205,8 +206,9 @@ main{
 .swiper-container {
 	position: relative;
 	width: 100%;
-	height: 450px;
+	/*height: 450px;*/
 	color: black;
+	/*//z-index: -1;*/
 }
 
 .swiper-slide {
@@ -225,15 +227,16 @@ main{
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	-webkit-justify-content: center;
-	justify-content: center;
+					justify-content: center;
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	-webkit-align-items: center;
-	align-items: center;
+					align-items: center;
 }
 
 .swiper-slide img {
 	width: 100%;
+	height: 100%;
 }
 
 .swiper-pagination-bullet{
@@ -255,7 +258,7 @@ main{
 
 .nav2 a {
 	display: block;
-	color: var(--color-text);;
+	color: var(--color-text);
 	text-align: center;
 	cursor: pointer;
 }
@@ -280,49 +283,102 @@ main{
 	color: var(--color-text);
 }
 /* ~-----------------------------------------------~ */
-
-#calendar_container{
-	height: auto;
-}
-
-.calendar_table{
-	border: 1px solid black;
-	border-collapse: collapse;
-	margin: 30px;
-	max-height: 100px;
-}
-
-#title_time , .title_time{
-	height: 50px;
-	border: 1px solid blue;
-}
-#container_time{
-	overflow: auto;
+/* <✅> */
+#calendar_container {
+	text-align: center;
 	
 }
-.calendar_inner{
-	vertical-align: top;
-	border-collapse: collapse;
-	border: 2px solid rgb(128, 255, 0);
-	height: auto;
+
+#calendar_container>input[type="text"] {
+	
 }
 
-
-.calendar_entry{
-	height: auto;
+#calendar_container>button {
+	width: 20px;
+	height: 20px;
+	
 }
 
+#calendar_container>span#calendar_filter_counter {
+	
+}
 
+.calendar_wrapper {
+	height: 300px;					/*❌*/
+	white-space: nowrap;		/*❌*/
+	overflow: scroll hidden;/*❌*/
+	color: var(--color-text); /* questo non serve, lo puoi togliere, è per farti capire come funziona la night-mode: 
+		definisci una variabile in html{} per la versione light e in html[data-theme="dark"] per la versione dark,
+		poi utilizzi quelal variabile in questo modo.
+		se vuoi che un colore non cambi tra le modalità fai semplicemente {color: ...}
+	*/
+}
+.calendar_wrapper::-webkit-scrollbar {
+	/*
+		si può personalizzare la barra dello scroll
+		https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp
+	*/
+	
+}
 
+.calendar_wrapper>ul {
+	overflow-y: scroll;		/*❌*/
+	white-space: initial; /*❌*/
+	display: inline-block;/*❌*/
+	width: 33.3%;
+	height: 100%;
+	margin: 0 10px 0 0;
+	background: orange;
+	
+}
+.calendar_wrapper>ul:last-child {
+	margin-right: 0;
+	
+}
+.calendar_wrapper>ul:empty {
+	/*display: none;*/
+	padding: 0 10px;
+	width: fit-content;
+	overflow: hidden;
+	
+}
 
+.calendar_wrapper>ul::-webkit-scrollbar {
+	
+}
 
+.calendar_wrapper>ul::before,
+.calendar_wrapper hour {
+	content: attr(data-hour);/*❌*/
+	position: sticky;				 /*❌*/
+	z-index: 3;							 /*❌*/
+	top: 5px;	/*✅,∃*/
+	border-radius: 10px;
+	padding: 0 5px;	
+	background: white;
+	color: black;
+	
+}
+
+.calendar_wrapper li {
+	margin: 10px;	/*✅,∃*/
+	padding: 10px;/*✅,∃*/
+	text-align: left;
+	border-radius: 0 10px 10px 10px;
+	background: lightgrey;
+	
+}
+
+.calendar_wrapper li.active>span {
+	font-weight: bold;
+	
+}
+/* </✅> */
 
 /* ~-----------------------------------------------~ */
 
 footer {
-	background-color: mediumblue;
-	height: 220px;
-
+	background-color: mediumblue
 }
 
 #foot_text {
@@ -333,9 +389,15 @@ footer {
 	font-size: 15px;
 	letter-spacing: 2px;
 	text-align: center;
+	font-style: normal;
+	word-wrap: normal;
 }
 
-.footertext {
+#foot_text span:not(.footer_bar) {
+	display: inline-block;
+}
+
+vertical_bar {
 	color: black;
 	font-size: 20px;
 	font-weight: bold;
