@@ -5,12 +5,13 @@
 *{
 	list-style: none;
 	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif ;
 }
 
 html{
-	--bg: white;
+	--bg: rgb(247, 247, 247);
 	--color-text: black;
-	--msg-color: lightgray;
+	--msg-color: rgb(240, 240, 240);
 }
 html[data-theme='dark']{
 	--bg:#131419;
@@ -23,8 +24,11 @@ body{
 	background-color: var(--bg);
 	color: var(--color-text);
 }
-
+#megacontainer{
+	/*in caso volessimo centrare la pagina*/
+}
 ul{padding-left: 0;}
+
 
 /* ~-----------------------------------------------~ */
 
@@ -282,20 +286,58 @@ main{
 	border: 2px solid antiquewhite;
 	color: var(--color-text);
 }
+
+
+
+
 /* ~-----------------------------------------------~ */
 /* <✅> */
 #calendar_container {
-	text-align: center;
+	text-align: left;
+	
+	background: rgba(130, 255, 249, 0.808);
+	/*border: 2px solid black;
+	margin: 20px;
+	border-radius: 0px 15px 15px 0px;*/
 	
 }
 
-#calendar_container>input[type="text"] {
-	
+#calendar_top{
+	height:70px ;
 }
 
-#calendar_container>button {
+
+.calendar_title{
+	float: left;
+	position: inherit;
+	border: 3px solid black;
+	margin: 20px  20px 0px 20px;
+	font-size: 30px;
+}
+
+.calendar_search_container{
+	margin:20px;
+	position: inherit;
+}
+
+#calendar_container input[type="text"]{
+	z-index: 2;
+	position: relative;
+	float: right;
+	width: 33%;
+	height:30px;
+	border:2px solid black;
+	margin:auto;
+
+
+
+}
+
+
+#calendar_container button {
 	width: 20px;
 	height: 20px;
+	float: right;
 	
 }
 
@@ -304,33 +346,38 @@ main{
 }
 
 .calendar_wrapper {
-	height: 300px;					/*❌*/
+	height: 400px;					/*❌*/
 	white-space: nowrap;		/*❌*/
 	overflow: scroll hidden;/*❌*/
-	color: var(--color-text); /* questo non serve, lo puoi togliere, è per farti capire come funziona la night-mode: 
+	color: black; /* questo non serve, lo puoi togliere, è per farti capire come funziona la night-mode: 
 		definisci una variabile in html{} per la versione light e in html[data-theme="dark"] per la versione dark,
 		poi utilizzi quelal variabile in questo modo.
 		se vuoi che un colore non cambi tra le modalità fai semplicemente {color: ...}
 	*/
 }
-.calendar_wrapper::-webkit-scrollbar {
-	/*
-		si può personalizzare la barra dello scroll
-		https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp
-	*/
-	
-}
+
+
 
 .calendar_wrapper>ul {
 	overflow-y: scroll;		/*❌*/
 	white-space: initial; /*❌*/
 	display: inline-block;/*❌*/
-	width: 33.3%;
+	border-radius: 0px 15px 15px 0px;
+	width: 33.33333333333%;
 	height: 100%;
-	margin: 0 10px 0 0;
-	background: orange;
+	margin:0px;
+	margin-left: 10px;
+	
+	background: rgba(255, 234, 196, 0.61);
 	
 }
+
+.calendar_wrapper>ul:{
+	
+}
+
+
+
 .calendar_wrapper>ul:last-child {
 	margin-right: 0;
 	
@@ -344,36 +391,43 @@ main{
 }
 
 .calendar_wrapper>ul::-webkit-scrollbar {
-	
+	width: 0px;
 }
 
+.calendar_wrapper::-webkit-scrollbar-track {
+		background: #f1f1f1;
+}
+
+.calendar_wrapper::-webkit-scrollbar-thumb {
+	background: #888;
+}
+
+
+
 .calendar_wrapper>ul::before,
+
 .calendar_wrapper hour {
 	content: attr(data-hour);/*❌*/
-	position: sticky;				 /*❌*/
-	z-index: 3;							 /*❌*/
-	top: 5px;	/*✅,∃*/
-	border-radius: 10px;
-	padding: 0 5px;	
-	background: white;
+	position: sticky;		 /*❌*/
+	z-index: 3;				
+	font-size: 30px;
 	color: black;
 	
 }
 
 .calendar_wrapper li {
-	margin: 10px;	/*✅,∃*/
+	border-top: 3px solid black;	/*✅,∃*/
 	padding: 10px;/*✅,∃*/
 	text-align: left;
-	border-radius: 0 10px 10px 10px;
-	background: lightgrey;
-	
+	background: rgba(255, 255, 255, 0.815);
+
 }
 
 .calendar_wrapper li.active>span {
 	font-weight: bold;
 	
 }
-/* </✅> */
+
 
 /* ~-----------------------------------------------~ */
 
@@ -414,3 +468,12 @@ vertical_bar {
 		display: none;
 	}
 }
+/*
+
+@font-face{
+	font-family: Costum fonts;
+	src: local();
+
+	/*per personalizzare il font*/
+}
+*/
