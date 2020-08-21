@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="light">
+<head>
+	<title>Fermimn</title>
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="Description" content="Istituto E.Fermi; nuovo sito ad elevata accessibilità liceo tecnico industriale liceo tecnologico">
+	<meta name="Keywords" content="accessibilità , informatica, elettronica, meccanica, chimica, elettrotecnica, liceo tecnologico; sito accessibile,  mantova , ECDL test center">
+	
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script src="functions.js"></script>
+	
+</head>
+<body>
+	
+	<div id="megacontainer">
+
+	<header>
+		<a href=""><img class="img1" src="data/logo fermi.png"></a>
+		<img class="img2" src="data/Scritta Fermi.png">
+		<input type="checkbox" name="theme" style="width:50px;height:50px">
+		<br>
+		
+		<div class="search-box">
+			<input class="search-txt" type="text" name="" placeholder="Type to search"></input>
+			<a href="#" class="search-btn">
+				<i class="fas fa-search"></i>
+			</a>
+		</div>
+		
+		<nav>
+			<ul class="dropdowns">
+				<li class="dropdown">
+					<button class="dropbtn">ISTITUTO</button>
+					<div class="dropdown-content">
+						<a href="http://fermimn.edu.it/dove_siamo/index.php">Chi siamo</a>
+						<a href="http://fermimn.edu.it/persone/index.php">Le persone</a>
+						<a href="http://fermimn.edu.it/struttura/index.php">I nostri corsi</a>
+						<a href="http://fermimn.edu.it/servizi/index.php">Strutture e servizi</a>
+						<a href="http://fermimn.edu.it/documenti/index.php">Documenti</a>
+						<a href="http://fermimn.edu.it/parlanodinoi/index.php">Parlano di noi</a>
+						<a href="http://fermimn.edu.it/bandi/">Bandi e gare</a>
+						<a href="http://www.istitutocomprensivoasola.gov.it/rete-di-ambito-19-mantova">Reti di ambito 2019</a>
+					</div>
+				</li>
+				<li class="dropdown">
+					<button class="dropbtn"><span class="hideWhenSmall">A.S. </span>2019/2020</button>
+					<div class="dropdown-content">
+						<a href="http://fermimn.edu.it/orari/index.php">Calendario-Orari</a>
+						<a href="http://fermimn.edu.it/progetti/index.php">Progetti</a>
+						<a href="http://fermimn.edu.it/cittadinanza/index.php">Cittadinanza e Costituzione</a>
+						<a href="http://fermimn.edu.it/formazione/index.php">Formazione</a>
+						<a href="https://www.fermi.mn.it/programmazione-comune/">Programmazione comune</a>
+						<a href="http://fermimn.edu.it/alternanza/">PTCO</a>
+						<a href="http://fermimn.edu.it/invalsi/index.php">Materiali invalsi</a>
+						<a href="http://fermimn.edu.it/studenti/viaggi.php">Viaggi ed uscite didattiche</a>
+						<a href="http://fermimn.edu.it/fabacademy/index.php">FabAcademy</a>
+						<a href="http://fermimn.edu.it/green/">Innovazioni Green</a>
+						<a href="http://fermimn.edu.it/privacy/index.php">Privacy GDPR 679/16</a>
+					</div>
+				</li>
+				<li class="dropdown">
+					<button class="dropbtn">NEWS</button>
+					<div class="dropdown-content">
+						<a href="http://fermimn.edu.it/index.php">Generali</a>
+						<a href="http://fermimn.edu.it/studenti/index.php">Studenti</a>
+						<a href="http://fermimn.edu.it/genitori/index.php">Genitori</a>
+						<a href="http://fermimn.edu.it/docenti/index.php">Docenti</a>
+						<a href="http://fermimn.edu.it/ATA/index.php">Personale ATA</a>
+						<a href="http://fermimn.edu.it/informazioni/index.php">III medie</a>
+						<a href="http://fermimn.edu.it/orientamento_uni/index.php">Orientamento in uscita</a>
+					</div>
+				</li>
+				<li class="dropdown">
+					<button class="dropbtn"><span class="hideWhenSmall">I NOSTRI </span>SITI</button>
+					<div class="dropdown-content">
+						<a href="http://fermimn.edu.it/storia/index.php">I siti del Fermi</a>
+						<a href="http://fermimn.edu.it/opensource/index.php">Open Source e Freeware</a>
+						<a href="http://servizi.fermi.mn.it/fotovoltaico/">Fotovoltaico</a>
+						<a href="http://servizi.fermi.mn.it/fotovoltaico/provincia.php">Dati energetici</a>
+						<a href="http://fermimn.edu.it/archiviodistato/index.php">Archivio di Stato</a>
+						<a href="http://scuola21.fermi.mn.it/">Scuola21</a>
+						<a href="http://ler.fermimn.edu.it/index.php">Progetto LER</a>
+					</div>
+				</li>
+				<li class="dropdown">
+					<button class="dropbtn">LINGUA</button>
+				</li>
+			</ul>
+		</nav>
+		
+	</header>
+	
+	
+	<main>
+		
+		<!-- Swiper -->
+		<section class="swiper-container">
+			<div class="swiper-wrapper">
+				<a class="swiper-slide">Notizia 1, con immgine, piccolo testo e link alla notizia intera </a>
+				<a class="swiper-slide"><img src="data/Immagine Slider.JPG"></a>
+				<a class="swiper-slide">Slide 3</a>
+			</div>
+			
+			<!-- Add Arrows -->
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+			
+			<!-- Add Pagination -->
+			<div class="swiper-pagination"></div>
+		</section>
+		
+		<nav class="nav2">
+			<ul>
+				<li><a href=""><img src="data/logo Zimbra.PNG"><br><span>ZIMBRA</span></a></li>
+				<li><a href="http://fermi-mn-sito.registroelettronico.com/"><img src="data/logo Mastercom.PNG">	<br><span>REGISTRO ELETTRONICO	</span></a></li>
+				<li><a href="https://www.fermimn.edu.it/pagoinrete/">				<img src="data/logo Pagoinrete.PNG"><br><span>PAGO IN RETE					</span></a></li>
+				<li><a href="https://moodle.fermi.mn.it/login/index.php">		<img src="data/logo Moodle.png">		<br><span>MOODLE								</span></a></li>
+				<li><a href="https://www.fermimn.edu.it/orari/calendar.php"><img src="data/logo fermi.png">			<br><span>CALENDARIO-ORARI			</span></a></li>
+			</ul>
+		</nav>
+		
+		<div id="calendar_container">
+			<div id="calendar_top">
+				<h3 class="calendar_title"><time datetime="2020-09-14">14 Novembre 2020</time></h3>
+			
+				<div class="calendar_search_container">
+					<input id="calendar_filter_input"  type="text" maxlength="6" placeholder="Cerca">
+					<button onclick="classFilter()"></button>
+					<span id="calendar_filter_counter"></span>
+				</div>
+				
+			</div>
+			<div class="calendar_wrapper">
+				<ul data-hour="8:00">
+					<li>AULA ORIGAMI - OLIMPIADI PROBLEM SOLVING - PROF. PUVIANI</li>
+					<li class="calendar_entry" data-class="3AIIN"><span>CLASSE 3AIIN</span> - AULA 19 - PROF. MASTRUZZI S. (PROF. BALDINI I. ASSENTE)</li>
+					<li class="calendar_entry" data-class="4CCH">	<span>CLASSE 4CCH	</span> - AULA 33 - PROF. MILANI</li>
+					<hour>8:30</hour> <!-- custom tag! -->
+					<li class="calendar_entry" data-class="4A 4D"><span>CLASSE 4A	4D</span> - AULA 904 - PROF. DELLA VEDOVA</li>
+					<li class="calendar_entry" data-class="4E">		<span>CLASSE 4E		</span> - AULA 922 - PROF. SPARITA 🤣</li>
+					<li class="calendar_entry" data-class="4ITEL"><span>CLASSE 4ITEL</span> - AULA 522 - PROF. MORETTI D.</li>
+					<li class="calendar_entry" data-class="5EAU">	<span>CLASSE 5EAU	</span> - AULA 510 - PROF. GUARIGLIA (PROF. BISCAZZO ASSENTE)</li>
+				</ul>
+				<ul data-hour="9:00">
+					<li>💩</li>
+					<li>💩</li>
+					<li>💩</li>
+					<li>💩</li>
+					<li>💩</li>
+				</ul>
+				<ul data-hour="10:00">
+					<li>💩</li>
+					<li>💩</li>
+					<li>💩</li>
+					<li>💩</li>
+					<li>💩</li>
+					<li>💩</li>
+					<li>💩</li>
+					<li>💩</li>
+					<li>💩</li>
+					<li>💩</li>
+				</ul>
+				<ul data-hour="11:00">
+					<li>AULA ORIGAMI - OLIMPIADI PROBLEM SOLVING - PROF. PUVIANI</li>
+					<li class="calendar_msg" data-class="4C">	<span>CLASSE 4C		</span> - AULA 74 - PROF. SAPIENZA</li>
+					<li class="calendar_msg" data-class="4CCH">	<span>CLASSE 4CCH	</span> - AULA 414 - PROF. TEMI</li>
+					<li class="calendar_msg" data-class="4E">	<span>CLASSE 4E		</span> - AULA 922 - PROF. SPARITA</li>
+					<li class="calendar_msg" data-class="4E">   <span>CLASSE 4E		</span> - AULA ORIGAMI - PROF. SPARITA</li>
+					<li class="calendar_msg" data-class="4ITEL"><span>CLASSE 4ITEL</span> - AULA 522 - PROF. MORETTI D.</li>
+					<li class="calendar_msg" data-class="5AMME"><span>CLASSE 5AMME</span> - AULA 444 - PROF. ADINOLFI (PROF. BALDINI I. ASSENTE)</li>
+					<li class="calendar_msg" data-class="5EAU">	<span>CLASSE 5EAU	</span> - AULA 510 - PROF. GUARIGLIA (PROF. BISCAZZO ASSENTE)</li>
+				</ul>
+				<ul data-hour="12:00">
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li> 
+
+
+
+				</ul>
+				<ul data-hour="13:00">
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+					<li>6</li>
+					<li>7</li>
+					<li>8</li>
+					<li>9</li>
+					<li>10</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="div">
+			NOTIZIE CHE SCORRONO
+		</div>
+
+	</main>
+	
+	
+	<div id="menu-popup">
+		<aside></aside>
+	</div>
+	
+	</div>
+
+	<footer>
+		
+		<address id="foot_text">
+			Strada Spolverina 5 - Mantova 46100<br>
+			
+			<span>Tel: 0376-262675</span><vertical_bar> | </vertical_bar><wbr> 
+			<span>C.M.: MNIS01100E</span><vertical_bar> | </vertical_bar><wbr>
+			<span>Codice Fiscale: 80016570204</span><br>
+			
+			<span>IBAN banca: IT 62 S 05696 11500 000013000X51</span><br>
+			
+			<span>IBAN posta: IT 22 W 07601 11500 000012443461</span><br>
+			
+			<span>CCP: 12443461 </span><vertical_bar> | </vertical_bar><wbr>
+			<span>CTU: 0313440 </span><vertical_bar> | </vertical_bar><wbr> 
+			<span>COD.UNIVOCO UFFICIO: UF6LSZ</span>
+			
+		</address>
+		
+	</footer>
+	
+	<script>
+		var swiper = new Swiper('.swiper-container', {
+			pagination: {
+				el: '.swiper-pagination',
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			autoplay: {
+				delay: 5000,
+			},
+			simulateTouch: window.outerWidth <= 768,
+			speed: 750,
+			
+		});
+		
+		document.querySelector('input[name=theme]')
+		.addEventListener('change', function(){
+			if (this.checked) document.firstElementChild.setAttribute('data-theme', 'dark');
+			else 							document.firstElementChild.setAttribute('data-theme', 'light');
+		});
+		
+	</script>
+	
+</body>
+</html>
