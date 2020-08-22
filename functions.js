@@ -1,22 +1,25 @@
 // Cavi was here
 function classFilter(){
 	const inputValue = document.getElementById("calendar_filter_input").value.toUpperCase();
+	const counter = document.getElementById("calendar_filter_counter");
 	var n = 0;
 	
-	if (!inputValue) return;
-	for (let element of document.getElementsByClassName("calendar_entry")){
-		element.classList.remove("active");
+	if (inputValue) {
 		
-		element.getAttribute("data-class").split(" ").forEach(klass => {
-			if (klass == inputValue){
-				element.classList.add("active");
-				n++;
-			}
-		});
+		for (let element of document.getElementsByClassName("calendar_entry")){
+			element.classList.remove("active");
+			
+			element.getAttribute("data-class").split(" ").forEach(klass => {
+				if (klass == inputValue){
+					element.classList.add("active");
+					n++;
+				}
+			});
+			
+		}
 		
 	}
 	
-	// counter
-	document.getElementById("calendar_filter_counter").innerHTML = (n == 0) ? "" : n + "found";
+	counter.innerHTML = (n == 0 && !inputValue) ? "" : n + " found";
 	
 }

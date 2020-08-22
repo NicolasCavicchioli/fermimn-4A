@@ -23,7 +23,7 @@
 	<header>
 		<a href=""><img class="img1" src="data/logo fermi.png"></a>
 		<img class="img2" src="data/Scritta Fermi.png">
-		<input type="checkbox" name="theme" style="width:50px;height:50px">
+		<input type="checkbox" name="theme" id="theme_toggler">
 		<br>
 		
 		<div class="search-box">
@@ -127,64 +127,77 @@
 		
 		<div id="calendar_container">
 			<div id="calendar_top">
+				
 				<h3 class="calendar_title"><time datetime="2020-09-14">14 Novembre 2020</time></h3>
 			
 				<div class="calendar_search_container">
-					<input id="calendar_filter_input"  type="text" maxlength="6" placeholder="Cerca">
-					<button onclick="classFilter()"></button>
+					mostra solo filtrate
+					<input id="show_only_filtered_toggler" type="checkbox">
+					<input id="calendar_filter_input"  type="text" maxlength="6" placeholder="Filtra per classe" oninput="classFilter()">
 					<span id="calendar_filter_counter"></span>
+					<br>
+					
+					mostra solo eventi
+					<input type="checkbox">
 				</div>
 				
-			</div>
-			<div class="calendar_wrapper">
+			</div><br>
+			
+			<div id="calendar_uls" class="calendar_wrapper">
 				<ul data-hour="8:00">
 					<li>AULA ORIGAMI - OLIMPIADI PROBLEM SOLVING - PROF. PUVIANI</li>
 					<li class="calendar_entry" data-class="3AIIN"><span>CLASSE 3AIIN</span> - AULA 19 - PROF. MASTRUZZI S. (PROF. BALDINI I. ASSENTE)</li>
 					<li class="calendar_entry" data-class="4CCH">	<span>CLASSE 4CCH	</span> - AULA 33 - PROF. MILANI</li>
-					<hour>8:30</hour> <!-- custom tag! -->
+					<li class="middle_hour">8:30</li> 
 					<li class="calendar_entry" data-class="4A 4D"><span>CLASSE 4A	4D</span> - AULA 904 - PROF. DELLA VEDOVA</li>
 					<li class="calendar_entry" data-class="4E">		<span>CLASSE 4E		</span> - AULA 922 - PROF. SPARITA 🤣</li>
 					<li class="calendar_entry" data-class="4ITEL"><span>CLASSE 4ITEL</span> - AULA 522 - PROF. MORETTI D.</li>
 					<li class="calendar_entry" data-class="5EAU">	<span>CLASSE 5EAU	</span> - AULA 510 - PROF. GUARIGLIA (PROF. BISCAZZO ASSENTE)</li>
+					<li>💩</li>
+					<li>💩</li>
+					<li>💩</li>
+					<li>💩</li>
+					<li>💩</li>
+					<li>💩</li>
+					<li>💩</li>
+					<li>💩</li>
+					<li>💩</li>
+					<li>💩</li>
+					<li>💩</li>
+					<li>💩</li>
+					<li>💩</li>
+					<li>💩</li>
+					<li>💩</li>
+					<li>💩</li>
+					<li>💩</li>
+					<li>💩</li>
+					<li>💩</li>
 				</ul>
 				<ul data-hour="9:00">
-					<li>💩</li>
+					<li>AAAAAAAAAAAAAAAAAAAAAAAAAAAA</li>
 					<li>💩</li>
 					<li>💩</li>
 					<li>💩</li>
 					<li>💩</li>
 				</ul>
 				<ul data-hour="10:00">
-					<li>💩</li>
-					<li>💩</li>
-					<li>💩</li>
-					<li>💩</li>
-					<li>💩</li>
-					<li>💩</li>
-					<li>💩</li>
-					<li>💩</li>
+					<li>AAAAAAAAAAAAAAAAAAAAAAAAAAAA</li>
 					<li>💩</li>
 					<li>💩</li>
 				</ul>
 				<ul data-hour="11:00">
 					<li>AULA ORIGAMI - OLIMPIADI PROBLEM SOLVING - PROF. PUVIANI</li>
-					<li class="calendar_msg" data-class="4C">	<span>CLASSE 4C		</span> - AULA 74 - PROF. SAPIENZA</li>
-					<li class="calendar_msg" data-class="4CCH">	<span>CLASSE 4CCH	</span> - AULA 414 - PROF. TEMI</li>
-					<li class="calendar_msg" data-class="4E">	<span>CLASSE 4E		</span> - AULA 922 - PROF. SPARITA</li>
-					<li class="calendar_msg" data-class="4E">   <span>CLASSE 4E		</span> - AULA ORIGAMI - PROF. SPARITA</li>
-					<li class="calendar_msg" data-class="4ITEL"><span>CLASSE 4ITEL</span> - AULA 522 - PROF. MORETTI D.</li>
-					<li class="calendar_msg" data-class="5AMME"><span>CLASSE 5AMME</span> - AULA 444 - PROF. ADINOLFI (PROF. BALDINI I. ASSENTE)</li>
-					<li class="calendar_msg" data-class="5EAU">	<span>CLASSE 5EAU	</span> - AULA 510 - PROF. GUARIGLIA (PROF. BISCAZZO ASSENTE)</li>
+					<li class="calendar_entry" data-class="4C">	<span>CLASSE 4C		</span> - AULA 74 - PROF. SAPIENZA</li>
+					<li class="calendar_entry" data-class="4CCH">	<span>CLASSE 4CCH	</span> - AULA 414 - PROF. TEMI</li>
+					<li class="calendar_entry" data-class="4E">	<span>CLASSE 4E		</span> - AULA 922 - PROF. SPARITA</li>
+					<li class="calendar_entry" data-class="4E">   <span>CLASSE 4E		</span> - AULA ORIGAMI - PROF. SPARITA</li>
+					<li class="calendar_entry" data-class="4ITEL"><span>CLASSE 4ITEL</span> - AULA 522 - PROF. MORETTI D.</li>
+					<li class="calendar_entry" data-class="5AMME"><span>CLASSE 5AMME</span> - AULA 444 - PROF. ADINOLFI (PROF. BALDINI I. ASSENTE)</li>
+					<li class="calendar_entry" data-class="5EAU">	<span>CLASSE 5EAU	</span> - AULA 510 - PROF. GUARIGLIA (PROF. BISCAZZO ASSENTE)</li>
 				</ul>
-				<ul data-hour="12:00">
-					<li>1</li>
-					<li>2</li>
-					<li>3</li>
-					<li>4</li> 
-
-
-
-				</ul>
+				<ul data-hour="12:00"><!--
+					lasciarla vuota per mostrare stile in caso di ora senza cambiamenti
+				--></ul>
 				<ul data-hour="13:00">
 					<li>1</li>
 					<li>2</li>
@@ -255,6 +268,11 @@
 		.addEventListener('change', function(){
 			if (this.checked) document.firstElementChild.setAttribute('data-theme', 'dark');
 			else 							document.firstElementChild.setAttribute('data-theme', 'light');
+		});
+		
+		document.querySelector('#show_only_filtered_toggler')
+		.addEventListener('change', () => {
+			document.getElementById('calendar_uls').classList.toggle("onlyActive")
 		});
 		
 	</script>
