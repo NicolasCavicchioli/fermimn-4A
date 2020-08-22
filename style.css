@@ -12,11 +12,13 @@ html{
 	--bg: rgb(247, 247, 247);
 	--color-text: black;
 	--msg-color: rgb(240, 240, 240);
+	
 }
 html[data-theme='dark']{
 	--bg:#131419;
 	--color-text: #fff;
 	--msg-color: darkblue;
+}
 }
 
 body{
@@ -294,8 +296,8 @@ main{
 /* <✅> */
 #calendar_container {
 	text-align: left;
-	
-	background: rgba(130, 255, 249, 0.808);
+	padding-top: 30px;
+	background: lightgrey;
 	/*border: 2px solid black;
 	margin: 20px;
 	border-radius: 0px 15px 15px 0px;*/
@@ -311,13 +313,19 @@ main{
 	float: left;
 	position: inherit;
 	border: 3px solid black;
-	margin: 20px  20px 0px 20px;
+	margin: auto;
 	font-size: 30px;
 }
 
 .calendar_search_container{
 	margin:20px;
 	position: inherit;
+}
+#calendar_container button {
+	width: 30px;
+	height: 30px;
+	float: right;
+	
 }
 
 #calendar_container input[type="text"]{
@@ -326,7 +334,6 @@ main{
 	float: right;
 	width: 33%;
 	height:30px;
-	border:2px solid black;
 	margin:auto;
 
 
@@ -334,41 +341,35 @@ main{
 }
 
 
-#calendar_container button {
-	width: 20px;
-	height: 20px;
-	float: right;
-	
-}
 
 #calendar_container>span#calendar_filter_counter {
 	
 }
 
 .calendar_wrapper {
-	height: 400px;					/*❌*/
+	height: 450px;					/*❌*/
 	white-space: nowrap;		/*❌*/
 	overflow: scroll hidden;/*❌*/
-	color: black; /* questo non serve, lo puoi togliere, è per farti capire come funziona la night-mode: 
+	color: black; 
+}
+
+/* questo non serve, lo puoi togliere, è per farti capire come funziona la night-mode: 
 		definisci una variabile in html{} per la versione light e in html[data-theme="dark"] per la versione dark,
 		poi utilizzi quelal variabile in questo modo.
 		se vuoi che un colore non cambi tra le modalità fai semplicemente {color: ...}
 	*/
-}
-
-
 
 .calendar_wrapper>ul {
 	overflow-y: scroll;		/*❌*/
 	white-space: initial; /*❌*/
 	display: inline-block;/*❌*/
-	border-radius: 0px 15px 15px 0px;
-	width: 33.33333333333%;
+	border-radius:15px;
+	width: 33%;
 	height: 100%;
 	margin:0px;
 	margin-left: 10px;
-	
-	background: rgba(255, 234, 196, 0.61);
+	background: mediumblue;
+	font-size: 14px;
 	
 }
 
@@ -411,15 +412,15 @@ main{
 	position: sticky;		 /*❌*/
 	z-index: 3;				
 	font-size: 30px;
-	color: black;
-	
+	color: rgb(255, 255, 255);
+	padding-left: 2%;
 }
 
 .calendar_wrapper li {
-	border-top: 3px solid black;	/*✅,∃*/
+	border-top: 2px solid black;	/*✅,∃*/
 	padding: 10px;/*✅,∃*/
 	text-align: left;
-	background: rgba(255, 255, 255, 0.815);
+	background: rgb(255, 255, 255);
 
 }
 
