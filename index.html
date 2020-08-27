@@ -21,11 +21,22 @@
 	<div id="megacontainer">
 
 	<header>
-		<a href=""><img class="img1" src="data/logo fermi.png"></a>
-		<img class="img2" src="data/Scritta Fermi.png">
-		<input type="checkbox" name="theme" id="theme_toggler">
-		<br>
+
+		<div id="title_container">
+			<a href=""><img class="img1" src="data/logo fermi.png"></a>
+			
+			<div id="top_title"> 
+				<h3> ISTITUTO SUPERIORE "ENRICO FERMI" MANTOVA</h3>
+				<p>istituto tecnico settore tecnologico</p>
+				<p>Liceo scientifico scienze applicate</p>
+			</div>
+			
+		</div>		
 		
+
+
+
+
 		<div class="search-box">
 			<input class="search-txt" type="text" name="" placeholder="Type to search"></input>
 			<a href="#" class="search-btn">
@@ -89,7 +100,11 @@
 					</div>
 				</li>
 				<li class="dropdown">
-					<button class="dropbtn">LINGUA</button>
+					
+					<button class="dropbtn" id="tema_bottone">
+						TEMA SCURO 
+					</button >
+
 				</li>
 			</ul>
 		</nav>
@@ -264,12 +279,14 @@
 			
 		});
 		
-		document.querySelector('input[name=theme]')
-		.addEventListener('change', function(){
-			if (this.checked) document.firstElementChild.setAttribute('data-theme', 'dark');
-			else 							document.firstElementChild.setAttribute('data-theme', 'light');
+		document.getElementById("tema_bottone").addEventListener('click', () => {
+			
+			if (document.firstElementChild.getAttribute('data-theme')=="light"){document.firstElementChild.setAttribute('data-theme', 'dark') ;}
+			else {document.firstElementChild.setAttribute('data-theme', 'light');}
 		});
-		
+
+
+	
 		document.querySelector('#show_only_filtered_toggler')
 		.addEventListener('change', () => {
 			document.getElementById('calendar_uls').classList.toggle("onlyActive")
