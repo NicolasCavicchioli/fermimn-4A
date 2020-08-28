@@ -281,8 +281,14 @@
 		
 		document.getElementById("tema_bottone").addEventListener('click', () => {
 			
-			if (document.firstElementChild.getAttribute('data-theme')=="light"){document.firstElementChild.setAttribute('data-theme', 'dark') ;}
-			else {document.firstElementChild.setAttribute('data-theme', 'light');}
+			if (document.firstElementChild.getAttribute('data-theme')=="light"){
+					document.firstElementChild.setAttribute('data-theme', 'dark');
+					document.getElementById("tema_bottone").innerHTML = "TEMA CHIARO" ;
+				}
+			else {
+				document.firstElementChild.setAttribute('data-theme', 'light');
+				document.getElementById("tema_bottone").innerHTML = "TEMA SCURO" ;
+				}
 		});
 
 
