@@ -133,50 +133,59 @@
 		<section class="main_swiper swiper-container">
 		
 			<div class="swiper-wrapper">
-				<div class="swiper-slide">
-					<!--Notizia 1, con immgine, piccolo testo e link alla notizia intera-->
-					<div class="swiper-slide-container imageAside">
+				
+				<div class="swiper-slide" style="display:unset">
+					<h4>BANDO PER IL NUOVO SITO DEL FERMI</h4>
+					<div class="news_container">
+						
 						<img src="data/Bando.jpg">
-						<div class="swiper-slide-text">
-							<h4>BANDO PER IL NUOVO SITO DEL FERMI</h4>
-							<span class="notizia">(notizia del 27-5-2020)</span>
-							
+						<div class="news_text">
 							<p>
 								<span class="bold">Rivolto a tutti gli studenti</span>
-									il bando per la costruzione del nuovo concept del Fermi per l'anno 2021, possono partecipare tutti gli alunni
-									della scuola singolarmente o in gruppi di massimo 4 persone, scadenza 31 agosto, 
+								il bando per la costruzione del nuovo concept del Fermi per l'anno 2021, possono partecipare tutti gli alunni
+								della scuola singolarmente o in gruppi di massimo 4 persone, scadenza 31 agosto, 
 								<span class="bold">premio 1000 Euro</span>.<br><br>
 								L’elaborazione grafica del progetto dovrà rappresentare l'identità e le finalità del Fermi utilizzando il logo
-									grafico esistente e proporre un'immagine contemporanea e dinamica.<br>
-								<br>
+								grafico esistente e proporre un'immagine contemporanea e dinamica.
 							</p>
-							
-							<button>Scopri di più</button>
-							
+							<a href="">
+								<button>Scopri di più</button>
+							</a>
+							<span class="notizia">(notizia del 27-5-2020)</span>
 						</div>
+						
+						
 					</div>
 				</div>
 				
-				<div class="swiper-slide"><img class="fullSize" src="data/Immagine Slider.JPG"></div>
-				
 				<div class="swiper-slide">
-					<div class="swiper-slide-container imageAside">
+					<h4>INFO CLASSI PRIME 2020/2021</h4>
+					<div class="news_container">
 						
 						<img src="data/welcome.jpg">
-						<div class="swiper-slide-text">
-							
-							<h4>INFO CLASSI PRIME 2020/2021</h4>
-							<span class="notizia">(notizia del 1-7-2020)</span>
-							<p>Sono state pubblicate tutte le informazioni per il perfezionamento delle iscrizioni delle classi prime per l'a.s. 2020/21.<br>
+						<div class="news_text">
+							<p>
+								Sono state pubblicate tutte le informazioni per il perfezionamento delle iscrizioni delle classi prime per l'a.s. 2020/21.<br>
 							</p>
-							<br>
 							<a href="https://www.fermimn.edu.it/informazioni/index.php">
 								<button>vai alla pagina </button>
 							</a>
-							
+							<span class="notizia">(notizia del 1-7-2020)</span>
 						</div>
+						
+						
 					</div>
 				</div>
+				
+				<div class="swiper-slide">
+					<div id="slide3">
+						<div class="mask"></div>
+						<h1>Bando per il nuovo sito del fermi</h1>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nulla amet quasi iusto aspernatur cupiditate ab vero animi voluptas reiciendis.</p>
+						<button>Scopri di più</button>
+					</div>
+				</div>
+				
 			</div>
 			
 			<!-- Add Arrows -->
@@ -190,7 +199,7 @@
 		
 		<nav class="nav2">
 			<ul>
-				<li><a href=""><img src="data/logo Zimbra.PNG"><br><span>ZIMBRA</span></a></li>
+				<li><a href="http://mail.fermi.mn.it"><img src="data/logo Zimbra.PNG"><br><span>ZIMBRA</span></a></li>
 				<li><a href="http://fermi-mn-sito.registroelettronico.com/"><img src="data/logo Mastercom.PNG">	<br><span>REGISTRO ELETTRONICO	</span></a></li>
 				<li><a href="https://www.fermimn.edu.it/pagoinrete/">				<img src="data/logo Pagoinrete.PNG"><br><span>PAGO IN RETE					</span></a></li>
 				<li><a href="https://moodle.fermi.mn.it/login/index.php">		<img src="data/logo Moodle.png">		<br><span>MOODLE								</span></a></li>
@@ -362,10 +371,10 @@
 		//});
 		
 		var swiper = new Swiper('.main_swiper', {
-			autoplay: {
-				delay: 5000,
-				disableOnInteraction: false,
-			},
+			//autoplay: {
+			//	delay: 5000,
+			//	disableOnInteraction: false,
+			//},
 			pagination: {
 				el: '.main_swiper>.swiper-pagination',
 			},
