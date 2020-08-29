@@ -8,7 +8,7 @@
 	<meta name="Description" content="Istituto E.Fermi; nuovo sito ad elevata accessibilità liceo tecnico industriale liceo tecnologico">
 	<meta name="Keywords" content="accessibilità , informatica, elettronica, meccanica, chimica, elettrotecnica, liceo tecnologico; sito accessibile,  mantova , ECDL test center">
 	
-	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css"/>
 	
 	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
@@ -17,31 +17,42 @@
 	
 </head>
 <body>
-	
-	<div id="megacontainer">
 
 	<header>
 
 		<div id="title_container">
-			<a href=""><img class="img1" src="data/logo fermi.png"></a>
-			
-			<div id="top_title"> 
-				<h3> ISTITUTO SUPERIORE "ENRICO FERMI" MANTOVA</h3>
-				<p>istituto tecnico settore tecnologico</p>
-				<p>Liceo scientifico scienze applicate</p>
+			<div>
+				<a href="">
+					<img id="main_logo" src="data/logo fermi square.png">
+				</a>
 			</div>
 			
-		</div>		
-		
-
-
-
-
-		<div class="search-box">
-			<input class="search-txt" type="text" name="" placeholder="Type to search"></input>
-			<a href="#" class="search-btn">
-				<i class="fas fa-search"></i>
-			</a>
+			<div class="top_title"> 
+				<h1> ISTITUTO SUPERIORE "ENRICO FERMI" MANTOVA</h1>
+				<h2>
+					istituto tecnico settore tecnologico<br>
+					liceo scientifico scienze applicate
+				</h2>
+			</div>
+			
+			<div id="spacer1">
+				<div class="switch">
+					<input id="theme_toggler" type="checkbox" name="theme">
+					<label for="theme_toggler" class="slider">
+						<i class="fas fa-moon"></i>
+						<i class="fas fa-sun"></i>
+						<div></div>
+					</label>
+				</div>
+				
+				<div class="search-box">
+					<input class="search-txt" type="text" name="" placeholder="Type to search"></input>
+					<a href="#" class="search-btn">
+						<i class="fas fa-search"></i>
+					</a>
+				</div>
+			</div>
+			
 		</div>
 		
 		<nav>
@@ -83,7 +94,7 @@
 						<a href="http://fermimn.edu.it/genitori/index.php">Genitori</a>
 						<a href="http://fermimn.edu.it/docenti/index.php">Docenti</a>
 						<a href="http://fermimn.edu.it/ATA/index.php">Personale ATA</a>
-						<a href="http://fermimn.edu.it/informazioni/index.php">III medie</a>
+						<a href="http://fermimn.edu.it/informazioni/index.php">Infor per III medie</a>
 						<a href="http://fermimn.edu.it/orientamento_uni/index.php">Orientamento in uscita</a>
 					</div>
 				</li>
@@ -100,12 +111,16 @@
 					</div>
 				</li>
 				<li class="dropdown">
-					
-					<button class="dropbtn" id="tema_bottone">
-						TEMA SCURO 
-					</button >
-
+					<button class="dropbtn">ALTRO</button>
+					<div class="dropdown-content">
+						<a href="http://albo.fermimn.edu.it/albi/bacheca-sindacale">Bacheca sindacale</a>
+						<a href="https://www.fermimn.edu.it/PON/">PON</a>
+						<a href="https://www.fermimn.edu.it/spaggiari/trasparenza.php">Amministrazione Trasparente</a>
+						<a href="https://www.fermimn.edu.it/spaggiari/albo.php">Albo Pretorio</a>
+						<a href="https://mad.fermimn.edu.it/">Messa a disposizione</a>
+					</div>
 				</li>
+				
 			</ul>
 		</nav>
 		
@@ -114,12 +129,54 @@
 	
 	<main>
 		
-		<!-- Swiper -->
-		<section class="swiper-container">
+		<!-- Main Swiper -->
+		<section class="main_swiper swiper-container">
+		
 			<div class="swiper-wrapper">
-				<a class="swiper-slide">Notizia 1, con immgine, piccolo testo e link alla notizia intera </a>
-				<a class="swiper-slide"><img src="data/Immagine Slider.JPG"></a>
-				<a class="swiper-slide">Slide 3</a>
+				<div class="swiper-slide">
+					<!--Notizia 1, con immgine, piccolo testo e link alla notizia intera-->
+					<div class="swiper-slide-container imageAside">
+						<img src="data/Bando.jpg">
+						<div class="swiper-slide-text">
+							<h4>BANDO PER IL NUOVO SITO DEL FERMI</h4>
+							<span class="notizia">(notizia del 27-5-2020)</span>
+							
+							<p>
+								<span class="bold">Rivolto a tutti gli studenti</span>
+									il bando per la costruzione del nuovo concept del Fermi per l'anno 2021, possono partecipare tutti gli alunni
+									della scuola singolarmente o in gruppi di massimo 4 persone, scadenza 31 agosto, 
+								<span class="bold">premio 1000 Euro</span>.<br><br>
+								L’elaborazione grafica del progetto dovrà rappresentare l'identità e le finalità del Fermi utilizzando il logo
+									grafico esistente e proporre un'immagine contemporanea e dinamica.<br>
+								<br>
+							</p>
+							
+							<button>Scopri di più</button>
+							
+						</div>
+					</div>
+				</div>
+				
+				<div class="swiper-slide"><img class="fullSize" src="data/Immagine Slider.JPG"></div>
+				
+				<div class="swiper-slide">
+					<div class="swiper-slide-container imageAside">
+						
+						<img src="data/welcome.jpg">
+						<div class="swiper-slide-text">
+							
+							<h4>INFO CLASSI PRIME 2020/2021</h4>
+							<span class="notizia">(notizia del 1-7-2020)</span>
+							<p>Sono state pubblicate tutte le informazioni per il perfezionamento delle iscrizioni delle classi prime per l'a.s. 2020/21.<br>
+							</p>
+							<br>
+							<a href="https://www.fermimn.edu.it/informazioni/index.php">
+								<button>vai alla pagina </button>
+							</a>
+							
+						</div>
+					</div>
+				</div>
 			</div>
 			
 			<!-- Add Arrows -->
@@ -128,6 +185,7 @@
 			
 			<!-- Add Pagination -->
 			<div class="swiper-pagination"></div>
+			
 		</section>
 		
 		<nav class="nav2">
@@ -144,23 +202,24 @@
 			<div id="calendar_top">
 				
 				<h3 class="calendar_title"><time datetime="2020-09-14">14 Novembre 2020</time></h3>
-			
 				<div class="calendar_search_container">
-					mostra solo filtrate
-					<input id="show_only_filtered_toggler" type="checkbox">
-					<input id="calendar_filter_input"  type="text" maxlength="6" placeholder="Filtra per classe" oninput="classFilter()">
-					<span id="calendar_filter_counter"></span>
-					<br>
 					
-					mostra solo eventi
-					<input type="checkbox">
+					<button id="show_only_event_toggler">Evidenzia eventi</button>
+					<div class="search_class">
+						
+						<div class="search_icon"><i class="fas fa-search"></i></div>
+						<input id="calendar_filter_input"  type="text" maxlength="6" placeholder="Classe" oninput="classFilter()">
+						
+					</div>
+					<span id="calendar_filter_counter"></span>
+					
 				</div>
 				
 			</div><br>
 			
-			<div id="calendar_uls" class="calendar_wrapper">
+			<div class="calendar_wrapper">
 				<ul data-hour="8:00">
-					<li>AULA ORIGAMI - OLIMPIADI PROBLEM SOLVING - PROF. PUVIANI</li>
+					<li class="event">AULA ORIGAMI - OLIMPIADI PROBLEM SOLVING - PROF. PUVIANI</li>
 					<li class="calendar_entry" data-class="3AIIN"><span>CLASSE 3AIIN</span> - AULA 19 - PROF. MASTRUZZI S. (PROF. BALDINI I. ASSENTE)</li>
 					<li class="calendar_entry" data-class="4CCH">	<span>CLASSE 4CCH	</span> - AULA 33 - PROF. MILANI</li>
 					<li class="middle_hour">8:30</li> 
@@ -168,52 +227,41 @@
 					<li class="calendar_entry" data-class="4E">		<span>CLASSE 4E		</span> - AULA 922 - PROF. SPARITA 🤣</li>
 					<li class="calendar_entry" data-class="4ITEL"><span>CLASSE 4ITEL</span> - AULA 522 - PROF. MORETTI D.</li>
 					<li class="calendar_entry" data-class="5EAU">	<span>CLASSE 5EAU	</span> - AULA 510 - PROF. GUARIGLIA (PROF. BISCAZZO ASSENTE)</li>
-					<li>💩</li>
-					<li>💩</li>
-					<li>💩</li>
-					<li>💩</li>
-					<li>💩</li>
-					<li>💩</li>
-					<li>💩</li>
-					<li>💩</li>
-					<li>💩</li>
-					<li>💩</li>
-					<li>💩</li>
-					<li>💩</li>
-					<li>💩</li>
-					<li>💩</li>
-					<li>💩</li>
-					<li>💩</li>
-					<li>💩</li>
-					<li>💩</li>
-					<li>💩</li>
+					<li>Bla</li>
+					<li>Bla</li>
+					<li>Bla</li>
+					<li>Bla</li>
+					<li>Bla</li>
+					<li>Bla</li>
+					<li>Bla</li>
+					<li>Bla</li>
+					<li>Bla</li>
+					<li>Bla</li>
+					<li>Bla</li>
 				</ul>
 				<ul data-hour="9:00">
-					<li>AAAAAAAAAAAAAAAAAAAAAAAAAAAA</li>
-					<li>💩</li>
-					<li>💩</li>
-					<li>💩</li>
-					<li>💩</li>
-				</ul>
-				<ul data-hour="10:00">
-					<li>AAAAAAAAAAAAAAAAAAAAAAAAAAAA</li>
-					<li>💩</li>
-					<li>💩</li>
-				</ul>
-				<ul data-hour="11:00">
-					<li>AULA ORIGAMI - OLIMPIADI PROBLEM SOLVING - PROF. PUVIANI</li>
+					<li class="event">AULA ORIGAMI - OLIMPIADI PROBLEM SOLVING - PROF. PUVIANI</li>
 					<li class="calendar_entry" data-class="4C">	<span>CLASSE 4C		</span> - AULA 74 - PROF. SAPIENZA</li>
 					<li class="calendar_entry" data-class="4CCH">	<span>CLASSE 4CCH	</span> - AULA 414 - PROF. TEMI</li>
 					<li class="calendar_entry" data-class="4E">	<span>CLASSE 4E		</span> - AULA 922 - PROF. SPARITA</li>
-					<li class="calendar_entry" data-class="4E">   <span>CLASSE 4E		</span> - AULA ORIGAMI - PROF. SPARITA</li>
+					<li class="middle_hour">9:30</li>
 					<li class="calendar_entry" data-class="4ITEL"><span>CLASSE 4ITEL</span> - AULA 522 - PROF. MORETTI D.</li>
 					<li class="calendar_entry" data-class="5AMME"><span>CLASSE 5AMME</span> - AULA 444 - PROF. ADINOLFI (PROF. BALDINI I. ASSENTE)</li>
 					<li class="calendar_entry" data-class="5EAU">	<span>CLASSE 5EAU	</span> - AULA 510 - PROF. GUARIGLIA (PROF. BISCAZZO ASSENTE)</li>
 				</ul>
-				<ul data-hour="12:00"><!--
-					lasciarla vuota per mostrare stile in caso di ora senza cambiamenti
-				--></ul>
-				<ul data-hour="13:00">
+				<ul data-hour="10:00">
+					<li class="calendar_entry" data-class="4E">   <span>CLASSE 4E		</span> - AULA ORIGAMI - PROF. SPARITA</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+					<li>6</li>
+					<li>7</li>
+					<li>8</li>
+					<li>9</li>
+					<li>10</li>
+				</ul>
+				<ul data-hour="11:00">
 					<li>1</li>
 					<li>2</li>
 					<li>3</li>
@@ -225,12 +273,40 @@
 					<li>9</li>
 					<li>10</li>
 				</ul>
+				<ul data-hour="12:00"></ul>
+				<ul data-hour="13:00">
+					<li class="calendar_entry" data-class="5EAU">	<span>CLASSE 5EAU	</span> - AULA 510 - PROF. GUARIGLIA (PROF. BISCAZZO ASSENTE)</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+					<li>6</li>
+					<li>7</li>
+					<li>8</li>
+					<li>9</li>
+					<li>10</li>
+				</ul>
 			</div>
+			
 		</div>
 
-		<div class="div">
-			NOTIZIE CHE SCORRONO
-		</div>
+		<!-- Swiper -->
+		<section class="secondary_swiper swiper-container">
+		
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"></div>
+				<div class="swiper-slide"></div>
+				<div class="swiper-slide"></div>
+			</div>
+			
+			<!-- Add Arrows -->
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+			
+			<!-- Add Pagination -->
+			<div class="swiper-pagination"></div>
+			
+		</section>
 
 	</main>
 	
@@ -239,8 +315,6 @@
 		<aside></aside>
 	</div>
 	
-	</div>
-
 	<footer>
 		
 		<address id="foot_text">
@@ -263,40 +337,61 @@
 	</footer>
 	
 	<script>
-		var swiper = new Swiper('.swiper-container', {
-			pagination: {
-				el: '.swiper-pagination',
-			},
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
-			},
-			autoplay: {
-				delay: 5000,
-			},
-			simulateTouch: window.outerWidth <= 768,
-			speed: 750,
-			
+		/* set light/dark mode based on user preference */
+		document.addEventListener("DOMContentLoaded", () => {
+			if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+				document.firstElementChild.setAttribute("data-theme", "dark");
+				document.getElementById("theme_toggler").checked = true;
+			}
 		});
 		
-		document.getElementById("tema_bottone").addEventListener('click', () => {
-			
-			if (document.firstElementChild.getAttribute('data-theme')=="light"){
-					document.firstElementChild.setAttribute('data-theme', 'dark');
-					document.getElementById("tema_bottone").innerHTML = "TEMA CHIARO" ;
-				}
-			else {
-				document.firstElementChild.setAttribute('data-theme', 'light');
-				document.getElementById("tema_bottone").innerHTML = "TEMA SCURO" ;
-				}
+		document.querySelector('input[name=theme]')
+		.addEventListener('change', function() {
+			document.firstElementChild.setAttribute('data-theme', (this.checked)? 'dark' : 'light')
 		});
-
-
-	
-		document.querySelector('#show_only_filtered_toggler')
-		.addEventListener('change', () => {
-			document.getElementById('calendar_uls').classList.toggle("onlyActive")
+		
+		document.querySelector('#show_only_event_toggler')
+		.addEventListener('click', function() {
+			this.classList.toggle("active");
+			document.getElementsByClassName("calendar_wrapper")[0].classList.toggle("onlyEvent")
 		});
+		
+		//document.querySelector('#show_only_event_toggler')
+		//.addEventListener('click', () => {
+		//	document.getElementsByClassName("calendar_wrapper")[0].classList.toggle("onlyEvent")
+		//});
+		
+		var swiper = new Swiper('.main_swiper', {
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false,
+			},
+			pagination: {
+				el: '.main_swiper>.swiper-pagination',
+			},
+			navigation: {
+				nextEl: '.main_swiper>.swiper-button-next',
+				prevEl: '.main_swiper>.swiper-button-prev',
+			},
+			simulateTouch: window.outerWidth <= 768,
+			touchMoveStopPropagation: true,
+			centeredSlides: true,
+			speed: 750,
+		});
+		
+		var swiper2 = new Swiper('.secondary_swiper', {
+			pagination: {
+				el: '.secondary_swiper>.swiper-pagination',
+			},
+			navigation: {
+				nextEl: '.secondary_swiper>.swiper-button-next',
+				prevEl: '.secondary_swiper>.swiper-button-prev',
+			},
+			simulateTouch: window.outerWidth <= 768,
+			touchMoveStopPropagation: true,
+			centeredSlides: true,
+		});
+		
 		
 	</script>
 	
