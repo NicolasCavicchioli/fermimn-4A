@@ -21,11 +21,14 @@ html{
 	--color-text: black;
 	--caldendar-bg: lightgray;
 	--theme-color-grad: linear-gradient(90deg, blue, mediumblue);
+	--deckTitle-color: #131419a3;
+	;
 }
 html[data-theme='dark'] {
 	--bg:#131419;
 	--color-text: #ddd;
 	--caldendar-bg: var(--bg);
+	--deckTitle-color: #ffffffd2;
 }
 
 body{
@@ -583,6 +586,15 @@ html[data-theme="dark"]
 }
 
 /* ~-----------------------------------------------~ */
+.deck-title{
+	font-size: 34px;
+    color: var(--deckTitle-color);
+    margin: 59px 40px 45px 45px;
+    border-bottom: var(--deckTitle-color) 3px solid;
+	text-align: left;
+
+	
+}
 
 .card-deck {
 	/*display: flex;
@@ -600,6 +612,7 @@ html[data-theme="dark"]
 	height: 100%;
 	background: var(--theme-color-grad);
 	text-align: center;
+	
 }
 
 .card > img {
