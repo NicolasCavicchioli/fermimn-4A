@@ -51,6 +51,7 @@
 						<i class="fas fa-search"></i>
 					</a>
 				</div>
+
 			</div>
 			
 		</div>
@@ -137,18 +138,36 @@
 				<div id="bando" class="swiper-slide">
 						<div class="slide_container">
 							<h1>Bando per il nuovo sito del fermi</h1>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nulla amet quasi iusto aspernatur cupiditate ab vero animi voluptas reiciendis.</p>
+							<p>Rivolto a tutti gli studenti il bando per la costruzione del nuovo concept del Fermi per l'anno 2021, possono partecipare tutti gli alunni della scuola singolarmente o in gruppi di massimo 4 persone, scadenza 31 agosto, premio 1000 Euro.
+
+								L’elaborazione grafica del progetto dovrà rappresentare l'identità e le finalità del Fermi utilizzando il logo grafico esistente e proporre un'immagine contemporanea e dinamica.
+								
+								Per informazioni rivolgersi ai proff.
+								Marco Camurri mcamurri@fermimn.edu.it - Paolo Pelizzoni ppelizzoni@fermimn.edu.it
+								(notizia del 27-5-2020)</p>
 							<button>Scopri di più</button>
 						</div>
 				</div>
 				
-				<div class="swiper-slide">
+				<div id="info_classi" class="swiper-slide">
 						<div class="slide_container">
-							<h1>Altro</h1>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nulla amet quasi iusto aspernatur cupiditate ab vero animi voluptas reiciendis.</p>
-							<button>Muori</button>
+							<h1>INFO CLASSI PRIME 2020/2021</h1>
+							<p>Sono state pubblicate tutte le informazioni per il perfezionamento delle iscrizioni delle classi prime per l'a.s. 2020/21.
+								vai alla pagina https://www.fermimn.edu.it/informazioni/index.php</p>
+							<button>Scopri di più</button>
 						</div>
 				</div>
+
+				<div id="graduatorie" class="swiper-slide">
+					<div class="slide_container">
+						<h1>GRADUATORIE PROVINCIALI E D'ISTITUTO: DOMANDE DAL 22 LUGLIO AL 6 AGOSTO</h1>
+						<p>Il Ministero dell’Istruzione con il decreto dipartimentale 858/20 ha dato il via alla procedura per l’inserimento nelle Graduatorie Provinciali e di Istituto per le Supplenze. Gli aspiranti potranno presentare domanda a partire dalle ore 15.00 di mercoledì 22 luglio 2020, fino alle ore 23.59 del 6 agosto.
+							Le istanze potranno essere presentate attraverso l’applicazione “Istanze online (POLIS)”. Sarà necessario possedere le credenziali SPID, o in alternativa, un’utenza valida per l’accesso ai servizi presenti nell’area riservata del Ministero con l’abilitazione specifica al servizio “Istanze online (POLIS)”.
+							Gli aspiranti potranno scegliere una provincia e 20 scuole della medesima provincia.
+							(notizia del 22-7-2020)</p>
+						<button>Scopri di più</button>
+					</div>
+			</div>
 				
 			</div>
 			
@@ -181,7 +200,7 @@
 						
 						<div class="search_icon"><i class="fas fa-search"></i></div>
 						<input id="calendar_filter_input"  type="text" maxlength="6" placeholder="Classe" oninput="classFilter()">
-						
+						 
 					</div>
 					<span id="calendar_filter_counter"></span>
 					
@@ -317,6 +336,8 @@
 			}
 		});
 		
+		
+
 		document.querySelector('input[name=theme]')
 		.addEventListener('change', function() {
 			document.firstElementChild.setAttribute('data-theme', (this.checked)? 'dark' : 'light')
