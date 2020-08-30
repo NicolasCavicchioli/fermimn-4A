@@ -16,17 +16,10 @@ function classFilter(){
 					n++;
 				}
 			});
-			
 		}
-		
 	} else {
 		document.getElementsByClassName("calendar_wrapper")[0].classList.remove('onlyActive');
 	}
 		
 	counter.innerHTML = (n == 0 && !inputValue) ? "" : n + " Found";
 }
-
-//if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-//	document.firstElementChild.setAttribute("data-theme", "dark");
-//	document.getElementById("theme_toggler").checked = true;
-//}
