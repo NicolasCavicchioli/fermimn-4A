@@ -459,8 +459,6 @@ ul{
 .calendar_title {
 	float: left;
 	position: inherit;
-	border: 3px solid var(--color-text);
-	border-radius: 10px;
 	margin: auto;
 	font-size: 30px;
 }
