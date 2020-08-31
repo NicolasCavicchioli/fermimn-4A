@@ -618,8 +618,11 @@ html[data-theme="dark"]
 .card > img {
 	width: 200px;
 	height: 200px;
+	max-height: 200px;
 	border-radius: 15px 15px 0 0;
 	background-color: #2f3640;
+	border-image-slice: fill;
+	alt:url(data/scritta\ fermi.png) ;
 }
 
 .card > .body {
@@ -630,10 +633,14 @@ html[data-theme="dark"]
 
 .card .title {
 	margin: 0;
+	height: 86px;
+	max-height: 43px ;
+	overflow-y: hidden;
 }
 .card .text {
 	margin: .5rem;
 	padding: 0;
+	
 }
 
 .card > .footer {
