@@ -97,12 +97,10 @@ body{
 	flex: 6;
 	color: var(--theme-color);
 	text-align: center;
-	text-shadow: 2px 2px 2px var(--color-text);
 }
 html[data-theme="dark"]
 .top_title {
 	color: #fff;
-	text-shadow: none;
 }
 
 .top_title h1 {
@@ -333,7 +331,7 @@ html[data-theme="dark"]
 }
 
 #bando {
-	background-image: url(data/bando.jpg);
+	background-image: url(data/Bando.jpg);
 	background-position-y: top;
 }
 #info_classi_prime {
@@ -344,13 +342,17 @@ html[data-theme="dark"]
 }
 
 .slide_container {
-	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
 	margin-bottom: 40px;
 	padding: 0 15px;
 	height: 100%;
+	text-align: center;
 }
 
 .slide_container h1 {
+	margin: 0;
 	color: white;
 	font-size: 4rem;
 	text-shadow: 3px 	0px 3px black,
@@ -360,17 +362,10 @@ html[data-theme="dark"]
 }
 .slide_container p {
 	overflow: hidden;
-	height: 40px;
-	word-break: break-all;
 	white-space: inherit;
 	color: white;
 	font-size: 19px;
-	margin-bottom: 0;
-	position: absolute;
-	bottom: 15px;
-	left: 0;
-	width: 100%;
-	text-align: center;
+	margin: 0;
 }
 .swiper-slide button {
 	margin: 0 auto;
@@ -614,7 +609,12 @@ html[data-theme="dark"]
 	height: 100%;
 	background: var(--theme-color-grad);
 	text-align: center;
-	
+	transition: .2s;
+	box-shadow: 0 5px 10px black;
+}
+.card:hover,
+.card:focus-within {
+	transform: translateY(-10px);
 }
 
 .card > img {
@@ -638,6 +638,10 @@ html[data-theme="dark"]
 	height: 86px;
 	max-height: 43px ;
 	overflow-y: hidden;
+	text-decoration: underline;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .card .text {
 	margin: .5rem;
@@ -709,7 +713,11 @@ vertical_bar {
 	.dropbtn {
 		padding: 5px;
 	}
-		
+	
+	
+	.swiper-wrapper {
+		height: 300px;
+	}
 	
 	.big_buttons {
 		height: auto;
