@@ -612,9 +612,11 @@ html[data-theme="dark"]
 	transition: .2s;
 	box-shadow: 0 5px 10px black;
 }
-.card:hover,
-.card:focus-within {
-	transform: translateY(-10px);
+@media screen and (min-width: 770px) {
+	.card:hover,
+	.card:focus-within {
+		transform: translateY(-10px);
+	}
 }
 
 .card > img {
