@@ -8,12 +8,10 @@
 	text-decoration: none;
 	font-family: Arial, Helvetica, sans-serif ;
 	position: relative;
+	color: inherit;
 }
 ul{
 	padding-left: 0;
-}
-a {
-	color: inherit;
 }
 
 html{
@@ -430,49 +428,51 @@ html[data-theme="dark"]
 /* ~-----------------------------------------------~ */
 
 #calendar_container {
-	background: var(--caldendar-bg);
+	margin-top: 20px;
+	background: var(--theme-color-grad);
 	text-align: left;
 }
 
 #calendar_top {
-	height: 70px;
+	display: flex;
+	flex-direction: row;
+	padding-left: 10px;
+	color: #fff;
 }
 
 
 .calendar_title {
 	float: left;
-	position: inherit;
-	margin: auto;
+	margin: auto 0;
 	padding-left: 5px;
 	font-size: 30px;
 }
 
-.calendar_search_container {
-	margin: 20px;
-	position: inherit;
+.calendar_filter_container {
+	display: flex;
 }
 
-.calendar_search_container button {
-	margin: 10px;
+#calendar_top button {
+	margin: auto 10px;
 	border: none;
 	border-radius: 10px;
+	padding: 5px 10px;
 	outline: none;
 	cursor: pointer;
-	
 	background: #2f3640;
 	color: white;
-	padding: 5px 10px;
 	box-shadow: 2px 2px black;
 }
-.calendar_search_container button:active {
+#calendar_top button:active {
 	box-shadow: inset 2px 2px black;
 }
 
 .search_class {
 	display: inline-flex;
-	background: #2f3640;
+	margin: 5px 0;
 	border-radius: 30px;
-	padding: 0 5px;
+	padding: 2px 5px;
+	background: #2f3640;
 }
 
 .search_icon {
@@ -485,6 +485,7 @@ html[data-theme="dark"]
 }
 
 #calendar_filter_input {
+	margin: auto 0;
 	width: 50px;
 	height: 30px;
 	background: transparent;
@@ -493,12 +494,22 @@ html[data-theme="dark"]
 	z-index: 2;
 }
 
+.calendar_counter_container {
+	display: flex;
+	margin-left: 10px
+}
+
+#calendar_filter_counter {
+	margin: auto 0;
+}
+
 
 .calendar_wrapper {
 	overflow: scroll hidden;
 	margin-bottom: 10px;
-	padding: 3rem 0 1rem;
+	padding: 2rem 0 1rem;
 	height: 600px;
+	background: var(--caldendar-bg);
 	white-space: nowrap;
 }
 
@@ -533,7 +544,7 @@ html[data-theme="dark"]
 	width: unset;
 }
 
-@media screen and (min-width: 425px) {
+@media screen and (min-width: 426px) {
 	.calendar_wrapper > ul:focus-within,
 	.calendar_wrapper > ul:hover {
 		transform: translateY(-1rem);
@@ -586,15 +597,6 @@ html[data-theme="dark"]
 }
 
 /* ~-----------------------------------------------~ */
-.deck-title{
-	font-size: 34px;
-    color: var(--deckTitle-color);
-    margin: 59px 40px 45px 45px;
-    border-bottom: var(--deckTitle-color) 3px solid;
-	text-align: left;
-
-	
-}
 
 .card-deck {
 	/*display: flex;
@@ -677,12 +679,6 @@ vertical_bar {
 
 /* ~-----------------------------------------------~ */
 
-/*@media screen and (max-width: 768px) {
-	.swiper-button-next,
-	.swiper-button-prev{
-		display: none;
-	}
-}*/
 @media screen and (max-width: 425px) {
 	:root {
 		font-size: 10px;
@@ -729,6 +725,10 @@ vertical_bar {
 		display: none;
 	}
 	
+	
+	#calendar_top {
+		flex-direction: column;
+	}
 	
 	.calendar_wrapper > ul {
 		width: auto;
